@@ -1,0 +1,12 @@
+.hero {
+    width: 90vw;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    border-radius: 15px;
+    color: rgb(234, 228, 228);
+}
+.back {
+    padding: 10px;
+    border-radius: inherit;
+    background-color: rgba(0, 0, 0, 0.6);
+}
