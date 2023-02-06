@@ -1,18 +1,15 @@
 import Hero from "../hero/hero";
+import { supers } from "../../json";
 
 function App() {
+    const data = JSON.parse(supers);
+    const hero = data.map(item => {
+        return <div><Hero {...item} /></div>
+    })
+
     return (
         <div className="app">
-            <div><Hero index="0" /></div>
-            <div><Hero index="1" /></div>
-            <div><Hero index="2" /></div>
-            <div><Hero index="3" /></div>
-            <div><Hero index="4" /></div>
-            <div><Hero index="5" /></div>
-            <div><Hero index="6" /></div>
-            <div><Hero index="7" /></div>
-            <div><Hero index="8" /></div>
-            <div><Hero index="9" /></div>
+            {hero}
         </div>
     )
 }

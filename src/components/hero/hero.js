@@ -1,21 +1,18 @@
-import { supers } from "./json";
 import './hero.css';
 
-const Hero = ({index, picture}) => {
-    const heroes = JSON.parse(supers);
-    console.log(heroes);
+const Hero = ({universe, picture, ego, work, friends, power, more}) => {
     const image = {
-        backgroundImage: 'url(' + heroes[index].picture + ')'
+        backgroundImage: 'url(' + picture + ')'
     };
     return (
         <div className="hero" style={image}>
             <div className="back">
-                <p><strong>Вселенная: </strong>{heroes[index].universe}</p>
-                <p><strong>Альтер эго: </strong>{heroes[index].ego}</p>
-                <p><strong>Род деятельности: </strong>{heroes[index].work}</p>
-                <p><strong>Друзья: </strong>{heroes[index].friends}</p>
-                <p><strong>Суперсилы: </strong>{heroes[index].power}</p>
-                <p><strong>Подробнее: </strong>{heroes[index].more}</p>
+                <p><strong>Вселенная: </strong>{universe}</p>
+                <p><strong>Альтер эго: </strong>{ego}</p>
+                <p><strong>Род деятельности: </strong>{work}</p>
+                <p><strong>Друзья: </strong>{friends}</p>
+                <p><strong>Суперсилы: </strong>{power}</p>
+                <p><strong>Подробнее: </strong>{more}</p>
             </div>
         </div>
     )
